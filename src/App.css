@@ -1,0 +1,59 @@
+body.light {
+  background-color: #ffffff;
+  color: #090909;
+}
+
+body.dark {
+  background-color: #1a1a1a;
+  color: rgba(255, 255, 255, 0.87);
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Adicione estilos para o componente StyleToggle */
+.StyleToggle {
+  text-align: center;
+  margin-top: 2rem; /* Ajuste a margem superior conforme necessário */
+}
+h1 {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2em;
+  margin: 1rem 0; /* Ajuste a margem conforme necessário */
+}
+
+/* Adicione estilos para a imagem */
+.banda-imagem {
+  width: 600px; /* Ajuste o tamanho da imagem conforme necessário */
+  height: auto; /* Isso mantém a proporção original da imagem */
+  border-radius: 10px; /* Ou qualquer valor de borda desejado */
+  margin-bottom: 1rem; /* Ajuste a margem inferior conforme necessário */
+}
+
+/* Adicione estilos para o botão */
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+button:hover {
+  border-color: #646cff;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
