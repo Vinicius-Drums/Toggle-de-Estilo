@@ -2,22 +2,24 @@
 import React, { useEffect, useState } from "react";
 
 // Importa o arquivo de estilos associado ao componente
-import "./StyleToggle.tsx";
+import "./StyleToggle.css";
 
 // Definição do componente funcional StyleToggle
 const StyleToggle: React.FC = () => {
-  // Define o estado 'style' para controlar o tema da aplicação
+  // Define o estado 'style' para controlar o tema da aplicação usando o useState
   const [style, setStyle] = useState<"light" | "dark">("light");
 
-  // Efeito para atualizar as classes no corpo do documento baseado no estilo selecionado
+  //  estamos usando o useEffect para atualizar as classes no corpo do documento baseado no estilo selecionado
   useEffect(() => {
-    document.body.classList.remove("light", "dark"); // Remove classes de tema anteriores
-    document.body.classList.add(style); // Adiciona a classe do tema selecionado
+    // Remove as classes de tema anteriores e adiciona a classe do tema selecionado ao corpo do documento
+    document.body.classList.remove("light", "dark");
+    document.body.classList.add(style);
   }, [style]); // Dispara o efeito sempre que o estilo for alterado
 
-  // Função para alternar entre os estilos
+  // Esta função é responsável por alternar entre os estilos
   const toggleStyle = () => {
-    setStyle((prevStyle) => (prevStyle === "light" ? "dark" : "light")); // Alterna entre os temas light e dark
+    // Alterna entre os temas light e dark ao clicar no botão
+    setStyle((prevStyle) => (prevStyle === "light" ? "dark" : "light"));
   };
 
   // Renderização do componente
@@ -31,7 +33,10 @@ const StyleToggle: React.FC = () => {
           className="banda-imagem"
         /> {/* Imagem da banda */}
       </div>
-      <button onClick={toggleStyle}>Toggle Style &#127761;</button> {/* Botão para alternar entre os estilos */}
+      <button onClick={toggleStyle}>
+        {/* Botão para alternar entre os estilos com um ícone */}
+        Toggle Style &#127761;
+      </button> 
     </div>
   );
 };
