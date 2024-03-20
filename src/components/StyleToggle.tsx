@@ -9,7 +9,7 @@ const StyleToggle: React.FC = () => {
   // Define o estado 'style' para controlar o tema da aplicação usando o useState
   const [style, setStyle] = useState<"light" | "dark">("light");
 
-  //  estamos usando o useEffect para atualizar as classes no corpo do documento baseado no estilo selecionado
+  //  usando o useEffect para atualizar as classes no corpo do documento baseado no estilo selecionado
   useEffect(() => {
     // Remove as classes de tema anteriores e adiciona a classe do tema selecionado ao corpo do documento
     document.body.classList.remove("light", "dark");
