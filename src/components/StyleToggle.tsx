@@ -1,8 +1,7 @@
 // Importa os módulos necessários do React
 import React, { useEffect, useState } from "react";
 
-// Importa o arquivo de estilos associado ao componente
-import "./StyleToggle.css";
+
 
 // Definição do componente funcional StyleToggle
 const StyleToggle: React.FC = () => {
